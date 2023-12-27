@@ -1,0 +1,64 @@
+1. go to mongodb.com and click try free
+2. sign in
+3. we are entered mongodb cloud version
+4. use free services, aws, region India would be better
+5. name is cluster is completely fine
+6. give username and password (avoid @ in the password)
+7. click on create user
+8. IP adress should be 0.0.0.0/0 otherwise it cannot connct with your system. 
+9. click connect
+10. you come to online version of a database
+11. click on connect
+12. go to drivers
+13. set driver to Python and the verson will be 3.6 or later. 
+14. copy from install your driver and paste it to your python IDE
+15. then copy from 'Add your connection string into your application code' and paste it to your IDE. 
+	make sure that you tick 'View full code sample' then copy and paste to IDE.
+16. In IDE, change the password to your given password and run.
+17.  in IDE code, use db = client.test with the 'connection string application code' for checking the db. after using the code, use the db to test the server running. 
+
+
+MongoDB is basically doccument based database. 
+unlike SQL, here collections are stored in the database. collection are nothing but like a dictionary. 
+here the key value pair is called JSON. 
+
+now create a database
+db = client['pwskills']
+
+after making a database, go to mongoDB > Database > Browse Collection > but you cannot see the database untill it have some kind of data. 
+
+so we made a data
+data = {"name" : "sudh", 
+        "class" : "data science masters",
+        "time" : "flexible"}
+
+now we need to made a collection
+
+coll_pwskills = db["my_record"] # it is like defining a name in which the collection will be storerd. 
+
+
+coll_pwskills.insert_one(data) # now i inserted the data into the databse. now it can be seen in mongoDB
+
+the collection or the data is called in the MongoDB is the dictionary which we call as JSON file. 
+
+pwskills is called database. my_record is called collection name. 
+
+
+
+data2 = [
+{"name" : "Amy", "Address" : "Apple st 652"}, 
+{"Name" : "Anna", "Adress" : "Mountain 21"},
+{"Name" : "Michael", "Adress" : "Vally 345"},
+{"Name" : "Sandy", "Adress" : "Ocean blvd 2"},
+{"Name" : "Betty" , "Adress" : "Green Grass 1"},
+{"Name" : "Richard", "Adress" : "Sky Street 331"},
+{"Name" : "Susan", "Adress" : "One Way 98"},
+{"Name" : "Vicky", "Adress" : "Yellow Garden 2"},
+{"Name" : "Ben", "Adress" : "Park lane 38"},
+{"Name" : "William", "Adress" : "Central Street 98"},
+{"Name" : "Chuck", "Adress" : "Main Road 989"},
+{"Name" : "Viola", "Adress" : "Sideway 1633"}
+]
+let's suppose this multiple records are available in my data. how can be able to use this as my database in single go?
+
+
